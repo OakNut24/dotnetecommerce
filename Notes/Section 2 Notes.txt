@@ -1,0 +1,10 @@
+add to the appsettings :
+ "ConnectionStrings": {
+    "DefaultConnection" : "Data source=store.db"
+  }
+add the service of sqlite 
+
+
+dotnet tool install --global dotnet-ef --version 6.0.2 || Installs the framework 
+dotnet ef migrations add InitialCreate -o Data/Migrations || Create the migrations.
+dotnet ef database update || Creates the DB by the settings from the migrations?
